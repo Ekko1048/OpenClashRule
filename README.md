@@ -1,200 +1,203 @@
-简介
-本项目生成适用于 Clash Premium 内核的规则集（RULE-SET），同时适用于所有使用 Clash Premium 内核的 Clash 图形用户界面（GUI）客户端。使用 GitHub Actions 北京时间每天早上 6:30 自动构建，保证规则最新。
+# 欢迎使用 `Arya` 在线 Markdown 编辑器
 
-说明
-本项目规则集（RULE-SET）的数据主要来源于项目 @Loyalsoldier/v2ray-rules-dat 和 @v2fly/domain-list-community；Apple 和 Google 列表里的域名来源于项目 @felixonmars/dnsmasq-china-list；中国大陆 IPv4 地址数据使用 @17mon/china_ip_list。
+[Arya](https://markdown.lovejade.cn/?utm_source=markdown.lovejade.cn)，是一款基于 `Vue`、`Vditor`，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、微信公众号特制的 HTML 等等。
 
-本项目的规则集（RULE-SET）只适用于 Clash Premium 版本。Clash Premium 相对于普通版，增加了 TUN 增强模式，能接管设备所有 TCP 和 UDP 流量。
+---
 
-Clash Premium 各版本下载地址
-⚠️ 由于 Clash 及其部分周边生态项目于 2023 年 11 月上旬删库跑路，现提供部分官方原版安装包、可执行文件，详情见 hidden 分支。
+## 如何使用
 
-Clash Premium 命令行版：
-官方版（适用于 Windows、macOS、Linux、OpenWRT 等多种平台）
-衍生版 Clash.Meta（适用于 Windows、macOS、Linux、OpenWRT 等多种平台）
-Clash Premium 图形用户界面版：
-ClashN（适用于 Windows）
-ClashX Pro（适用于 macOS）
-Clash-verge（适用于 Windows、macOS、Linux）
-Clash for Windows（适用于 Windows、macOS、Linux）
-Clash for Android（适用于 Android）
-规则文件地址及使用方式
-在线地址（URL）
-如果无法访问域名 raw.githubusercontent.com，可以使用第二个地址（cdn.jsdelivr.net），但是内容更新会有 12 小时的延迟。以下地址填写在 Clash 配置文件里的 rule-providers 里的 url 配置项中。
+**微注**：清空目前这份默认文档，即处于可使用态。[Arya](https://markdown.lovejade.cn/?utm_source=markdown.lovejade.cn) 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，**绝不窥测用户个人隐私，可放心使用**；Github 源码：[markdown-online-editor](https://github.com/nicejade/markdown-online-editor)，部分功能仍在开发🚧，敬请期待。
 
-直连域名列表 direct.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
-代理域名列表 proxy.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
-广告域名列表 reject.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-私有网络专用域名列表 private.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
-Apple 在中国大陆可直连的域名列表 apple.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
-iCloud 域名列表 icloud.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
-[慎用]Google 在中国大陆可直连的域名列表 google.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
-GFWList 域名列表 gfw.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
-非中国大陆使用的顶级域名列表 tld-not-cn.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
-Telegram 使用的 IP 地址列表 telegramcidr.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
-局域网 IP 及保留 IP 地址列表 lancidr.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
-中国大陆 IP 地址列表 cncidr.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
-需要直连的常见软件列表 applications.txt：
-https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
-使用方式
-要想使用本项目的规则集，只需要在 Clash 配置文件中添加如下 rule-providers 和 rules。
+默认为[所见即所得](https://hacpai.com/article/1577370404903?utm_source=github.com)模式，可通过 `⌘-⇧-M`（`Ctrl-⇧-M`）进行切换；或通过以下方式：
 
-Rule Providers 配置方式
-rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
+- 所见即所得：`⌘-⌥-7`（`Ctrl-alt-7`）；
+- 即时渲染：`⌘-⌥-8`（`Ctrl-alt-8`）；
+- 分屏渲染：`⌘-⌥-9`（`Ctrl-alt-9`）；
 
-  icloud:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
-    path: ./ruleset/icloud.yaml
-    interval: 86400
+### PPT 预览
 
-  apple:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./ruleset/apple.yaml
-    interval: 86400
+如果您用作 `PPT` 预览（入口在`设置`中），需要注意，这里暂还不能支持各种图表的渲染；您可以使用 `---` 来定义水平方向上幻灯片，用 `--` 来定义垂直幻灯片；更多设定可以参见 [RevealJs 文档](https://github.com/hakimel/reveal.js#table-of-contents)。
 
-  google:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./ruleset/google.yaml
-    interval: 86400
+---
 
-  proxy:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./ruleset/proxy.yaml
-    interval: 86400
+## 什么是 Markdown
 
-  direct:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./ruleset/direct.yaml
-    interval: 86400
+[Markdown](https://nicelinks.site/tags/Markdown/?utm_source=markdown.lovejade.cn) 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号，以最小的输入代价，生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，**粗体**、*斜体* 或者[超文本链接](https://vue-cli3.lovejade.cn/explore/)，更棒的是，它还可以：
 
-  private:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./ruleset/private.yaml
-    interval: 86400
+---
 
-  gfw:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./ruleset/gfw.yaml
-    interval: 86400
+### 1. 制作待办事宜 `Todo` 列表
 
-  tld-not-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./ruleset/tld-not-cn.yaml
-    interval: 86400
+- [x] 🎉 通常 `Markdown` 解析器自带的基本功能；
+- [x] 🍀 支持**流程图**、**甘特图**、**时序图**、**任务列表**；
+- [x] 🏁 支持粘贴 HTML 自动转换为 Markdown；
+- [x] 💃🏻 支持插入原生 Emoji、设置常用表情列表；
+- [x] 🚑 支持编辑内容保存**本地存储**，防止意外丢失；
+- [x] 📝 支持**实时预览**，主窗口大小拖拽，字符计数；
+- [x] 🛠 支持常用快捷键(**Tab**)，及代码块添加复制
+- [x] ✨ 支持**导出**携带样式的 PDF、PNG、JPEG 等；
+- [x] ✨ 升级 Vditor，新增对 `echarts` 图表的支持；
+- [x] 👏 支持检查并格式化 Markdown 语法，使其专业；
+- [x] 🦑 支持五线谱、及[部分站点、视频、音频解析](https://github.com/b3log/vditor/issues/117?utm_source=hacpai.com#issuecomment-526986052)；
+- [x] 🌟 增加对**所见即所得**编辑模式的支持(`⌘-⇧-M`)；
 
-  telegramcidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
-    interval: 86400
+---
 
-  cncidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./ruleset/cncidr.yaml
-    interval: 86400
+### 2. 书写一个质能守恒公式[^LaTeX]
 
-  lancidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
-    interval: 86400
+$$
+E=mc^2
+$$
 
-  applications:
-    type: http
-    behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    path: ./ruleset/applications.yaml
-    interval: 86400
-白名单模式 Rules 配置方式（推荐）
-白名单模式，意为「没有命中规则的网络流量，统统使用代理」，适用于服务器线路网络质量稳定、快速，不缺服务器流量的用户。
-以下配置中，除了 DIRECT 和 REJECT 是默认存在于 Clash 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 proxies 或 proxy-groups 中的 name。如你直接使用下面的 rules 规则，则需要在 proxies 或 proxy-groups 中手动配置一个 name 为 PROXY 的 policy。
-如你希望 Apple、iCloud 和 Google 列表中的域名使用代理，则把 policy 由 DIRECT 改为 PROXY，以此类推，举一反三。
-如你不希望进行 DNS 解析，可在 GEOIP 规则的最后加上 ,no-resolve，如 GEOIP,CN,DIRECT,no-resolve。
-rules:
-  - RULE-SET,applications,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,PROXY
-  - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,PROXY
-黑名单模式 Rules 配置方式
-黑名单模式，意为「只有命中规则的网络流量，才使用代理」，适用于服务器线路网络质量不稳定或不够快，或服务器流量紧缺的用户。通常也是软路由用户、家庭网关用户的常用模式。
-以下配置中，除了 DIRECT 和 REJECT 是默认存在于 Clash 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 proxies 或 proxy-groups 中的 name。如你直接使用下面的 rules 规则，则需要在 proxies 或 proxy-groups 中手动配置一个 name 为 PROXY 的 policy。
-rules:
-  - RULE-SET,applications,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,telegramcidr,PROXY
-  - MATCH,DIRECT
-致谢
-@Loyalsoldier/geoip
-@Loyalsoldier/v2ray-rules-dat
-@gfwlist/gfwlist
-@v2fly/domain-list-community
-@felixonmars/dnsmasq-china-list
-@17mon/china_ip_list
+---
+
+### 3. 高亮一段代码[^code]
+
+```js
+// 给页面里所有的 DOM 元素添加一个 1px 的描边（outline）;
+[].forEach.call($$("*"),function(a){
+  a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16);
+})
+```
+
+### 4. 高效绘制[流程图](https://github.com/knsv/mermaid#flowchart)
+
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
+
+### 5. 高效绘制[序列图](https://github.com/knsv/mermaid#sequence-diagram)
+
+```mermaid
+sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice->John: Hello John, how are you?
+  loop Healthcheck
+      John->John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts <br/>prevail...
+  John-->Alice: Great!
+  John->Bob: How about you?
+  Bob-->John: Jolly good!
+```
+
+### 6. 高效绘制[甘特图](https://github.com/knsv/mermaid#gantt-diagram)
+
+> **甘特图**内在思想简单。基本是一条线条图，横轴表示时间，纵轴表示活动（项目），线条表示在整个期间上计划和实际的活动完成情况。它直观地表明任务计划在什么时候进行，及实际进展与计划要求的对比。
+
+```mermaid
+gantt
+  title 项目开发流程
+  section 项目确定
+    需求分析       :a1, 2019-06-22, 3d
+    可行性报告     :after a1, 5d
+    概念验证       : 5d
+  section 项目实施
+    概要设计      :2019-07-05  , 5d
+    详细设计      :2019-07-08, 10d
+    编码          :2019-07-15, 10d
+    测试          :2019-07-22, 5d
+  section 发布验收
+    发布: 2d
+    验收: 3d
+```
+
+### 7. 支持图表
+
+```echarts
+{
+  "backgroundColor": "#212121",
+  "title": {
+    "text": "「晚晴幽草轩」访问来源",
+    "subtext": "2019 年 6 月份",
+    "x": "center",
+    "textStyle": {
+      "color": "#f2f2f2"
+    }
+  },
+  "tooltip": {
+    "trigger": "item",
+    "formatter": "{a} <br/>{b} : {c} ({d}%)"
+  },
+  "legend": {
+    "orient": "vertical",
+    "left": "left",
+    "data": [
+      "搜索引擎",
+      "直接访问",
+      "推荐",
+      "其他",
+      "社交平台"
+    ],
+    "textStyle": {
+      "color": "#f2f2f2"
+    }
+  },
+  "series": [
+    {
+      "name": "访问来源",
+      "type": "pie",
+      "radius": "55%",
+      "center": [
+        "50%",
+        "60%"
+      ],
+      "data": [
+        {
+          "value": 10440,
+          "name": "搜索引擎",
+          "itemStyle": {
+            "color": "#ef4136"
+          }
+        },
+        {
+          "value": 4770,
+          "name": "直接访问"
+        },
+        {
+          "value": 2430,
+          "name": "推荐"
+        },
+        {
+          "value": 342,
+          "name": "其他"
+        },
+        {
+          "value": 18,
+          "name": "社交平台"
+        }
+      ],
+      "itemStyle": {
+        "emphasis": {
+          "shadowBlur": 10,
+          "shadowOffsetX": 0,
+          "shadowColor": "rgba(0, 0, 0, 0.5)"
+        }
+      }
+    }
+  ]
+}
+```
+
+> **备注**：上述 echarts 图表📈，其数据，须使用严格的 **JSON** 格式；您可使用 JSON.stringify(data)，将对象传换从而得标准数据，即可正常使用。
+
+### 8. 绘制表格
+
+| 作品名称        | 在线地址   |  上线日期  |
+| :--------  | :-----  | :----:  |
+| 倾城之链 | [https://nicelinks.site](https://nicelinks.site/??utm_source=markdown.lovejade.cn) |2017-09-20|
+| 晚晴幽草轩 | [https://jeffjade.com](https://jeffjade.com/??utm_source=markdown.lovejade.cn) |2014-09-20|
+| 静轩之别苑 | [http://quickapp.lovejade.cn](http://quickapp.lovejade.cn/??utm_source=markdown.lovejade.cn) |2019-01-12|
+
+### 9. 更详细语法说明
+
+想要查看更详细的语法说明，可以参考这份 [Markdown 资源列表](https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md)，涵盖入门至进阶教程，以及资源、平台等信息，能让您对她有更深的认知。
+
+总而言之，不同于其它*所见即所得*的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。**Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。** 目前它已经成为世界上最大的技术分享网站 `GitHub` 和 技术问答网站 `StackOverFlow` 的御用书写格式，而且越发流行，正在在向各行业渗透。
+
+最新更新于 2019.08.21
