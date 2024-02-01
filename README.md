@@ -20,7 +20,6 @@
   * [Clash for Windows](https://github.com/Loyalsoldier/clash-rules/tree/hidden/software/clash-for-windows)（适用于 Windows、macOS、Linux）
   * [Clash for Android](https://apkpure.com/clash-for-android/com.github.kr328.clash/versions)（适用于 Android）
 
-
 ### 使用方式
 
 要想使用本项目的规则集，只需要在 Clash 配置文件中添加如下 `rule-providers` 和 `rules`。
@@ -29,12 +28,318 @@
 
 ```
 rule-providers:
-  reject:
+ YouTube:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Google:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ GitHub:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ OneDrive:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Microsoft:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ AppStore:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppStore/AppStore.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ iCloud:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/iCloud/iCloud.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Apple:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Telegram:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ PotatoChat:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PotatoChat/PotatoChat.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ KakaoTalk:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/KakaoTalk/KakaoTalk.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Line:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Line/Line.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Netflix:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Dubox:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Dubox/Dubox.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ TikTok:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Disney:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Twitter:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Facebook:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Spotify:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Wikipedia:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Wikipedia/Wikipedia.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Discord:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ PayPal:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Spark:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spark/Spark.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Sony:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Sony/Sony.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ BBC:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BBC/BBC.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Amazon:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Amazon/Amazon.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Instagram:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Whatsapp:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Whatsapp/Whatsapp.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Adobe:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Adobe/Adobe.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Vimeo:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Vimeo/Vimeo.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Bestbuy:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bestbuy/Bestbuy.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Duckduckgo:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Duckduckgo/Duckduckgo.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ GitBook:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitBook/GitBook.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Gucci:
+    type: http
+    behavior: domain
+    url:”https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Gucci/Gucci.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Imgur:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Imgur/Imgur.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Pinterest:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Pinterest/Pinterest.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Reddit:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Samsung:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Samsung/Samsung.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Razer:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Razer/Razer.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Shopee:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Shopee/Shopee.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Shopify:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Shopify/Shopify.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Twitch:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitch/Twitch.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ VISA:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/VISA/VISA.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ WIX:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WIX/WIX.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Zoho:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Zoho/Zoho.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ eBay:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/eBay/eBay.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ MOMOShop:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/MOMOShop/MOMOShop.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Binance:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Binance/Binance.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ OpenAI:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ MicrosoftEdge:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/MicrosoftEdge/MicrosoftEdge.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Bing:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
+ Copilot:
+    type: http
+    behavior: domain
+    url:”https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml”
+    path: ./ruleset/GitHub.yaml
+    interval: 86400"
 ```
 
 #### 白名单模式 Rules 配置方式（推荐）
@@ -46,10 +351,60 @@ rule-providers:
 
 ```
 rules:
-  - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
+  - RULE-SET,YouTube,PROXY
+  - RULE-SET,Google,PROXY
+  - RULE-SET,GitHub,PROXY
+  - RULE-SET,OneDrive,PROXY
+  - RULE-SET,Microsoft,PROXY
+  - RULE-SET,AppStore,PROXY
+  - RULE-SET,iCloud,PROXY
+  - RULE-SET,Apple,PROXY
+  - RULE-SET,Telegram,PROXY
+  - RULE-SET,PotatoChat,PROXY
+  - RULE-SET,KakaoTalk,PROXY
+  - RULE-SET,Line,PROXY
+  - RULE-SET,Netflix,PROXY
+  - RULE-SET,Dubox,PROXY
+  - RULE-SET,TikTok,PROXY
+  - RULE-SET,Disney,PROXY
+  - RULE-SET,Twitter,PROXY
+  - RULE-SET,Facebook,PROXY
+  - RULE-SET,Spotify,PROXY
+  - RULE-SET,Wikipedia,PROXY
+  - RULE-SET,Discord,PROXY
+  - RULE-SET,PayPal,PROXY
+  - RULE-SET,Spark,PROXY
+  - RULE-SET,Sony,PROXY
+  - RULE-SET,BBC,PROXY
+  - RULE-SET,Amazon,PROXY
+  - RULE-SET,Instagram,PROXY
+  - RULE-SET,Whatsapp,PROXY
+  - RULE-SET,Adobe,PROXY
+  - RULE-SET,Vimeo,PROXY
+  - RULE-SET,Bestbuy,PROXY
+  - RULE-SET,Duckduckgo,PROXY
+  - RULE-SET,GitBook,PROXY
+  - RULE-SET,Gucci,PROXY
+  - RULE-SET,Imgur,PROXY
+  - RULE-SET,Pinterest,PROXY
+  - RULE-SET,Reddit,PROXY
+  - RULE-SET,Samsung,PROXY
+  - RULE-SET,Razer,PROXY
+  - RULE-SET,Shopee,PROXY
+  - RULE-SET,Shopify,PROXY
+  - RULE-SET,Twitch,PROXY
+  - RULE-SET,VISA,PROXY
+  - RULE-SET,WIX,PROXY
+  - RULE-SET,Zoho,PROXY
+  - RULE-SET,eBay,PROXY
+  - RULE-SET,MOMOShop,PROXY
+  - RULE-SET,Binance,PROXY
+  - RULE-SET,OpenAI,PROXY
+  - RULE-SET,MicrosoftEdge,PROXY
+  - RULE-SET,Bing,PROXY
+  - RULE-SET,Copilot,PROXY
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
@@ -62,14 +417,60 @@ rules:
 
 ```
 rules:
-  - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,YouTube,PROXY
+  - RULE-SET,Google,PROXY
+  - RULE-SET,GitHub,PROXY
+  - RULE-SET,OneDrive,PROXY
+  - RULE-SET,Microsoft,PROXY
+  - RULE-SET,AppStore,PROXY
+  - RULE-SET,iCloud,PROXY
+  - RULE-SET,Apple,PROXY
+  - RULE-SET,Telegram,PROXY
+  - RULE-SET,PotatoChat,PROXY
+  - RULE-SET,KakaoTalk,PROXY
+  - RULE-SET,Line,PROXY
+  - RULE-SET,Netflix,PROXY
+  - RULE-SET,Dubox,PROXY
+  - RULE-SET,TikTok,PROXY
+  - RULE-SET,Disney,PROXY
+  - RULE-SET,Twitter,PROXY
+  - RULE-SET,Facebook,PROXY
+  - RULE-SET,Spotify,PROXY
+  - RULE-SET,Wikipedia,PROXY
+  - RULE-SET,Discord,PROXY
+  - RULE-SET,PayPal,PROXY
+  - RULE-SET,Spark,PROXY
+  - RULE-SET,Sony,PROXY
+  - RULE-SET,BBC,PROXY
+  - RULE-SET,Amazon,PROXY
+  - RULE-SET,Instagram,PROXY
+  - RULE-SET,Whatsapp,PROXY
+  - RULE-SET,Adobe,PROXY
+  - RULE-SET,Vimeo,PROXY
+  - RULE-SET,Bestbuy,PROXY
+  - RULE-SET,Duckduckgo,PROXY
+  - RULE-SET,GitBook,PROXY
+  - RULE-SET,Gucci,PROXY
+  - RULE-SET,Imgur,PROXY
+  - RULE-SET,Pinterest,PROXY
+  - RULE-SET,Reddit,PROXY
+  - RULE-SET,Samsung,PROXY
+  - RULE-SET,Razer,PROXY
+  - RULE-SET,Shopee,PROXY
+  - RULE-SET,Shopify,PROXY
+  - RULE-SET,Twitch,PROXY
+  - RULE-SET,VISA,PROXY
+  - RULE-SET,WIX,PROXY
+  - RULE-SET,Zoho,PROXY
+  - RULE-SET,eBay,PROXY
+  - RULE-SET,MOMOShop,PROXY
+  - RULE-SET,Binance,PROXY
+  - RULE-SET,OpenAI,PROXY
+  - RULE-SET,MicrosoftEdge,PROXY
+  - RULE-SET,Bing,PROXY
+  - RULE-SET,Copilot,PROXY
   - MATCH,DIRECT
 ```
 
@@ -78,3 +479,5 @@ rules:
 * [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)
 
 ## 项目 Star 数增长趋势
+
+
